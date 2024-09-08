@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+:root {
+  /* active input border */
+  --input-border: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+
+  --input-error: hsl(0, 100%, 66%);
+
+  --light-violet: hsl(270, 3%, 87%);
+  --dark-violet: hsl(279, 6%, 55%);
+  --v-dark-violet: hsl(278, 68%, 11%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+}

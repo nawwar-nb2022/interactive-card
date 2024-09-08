@@ -1,0 +1,260 @@
+.mainContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+/* left section */
+.gradient-section {
+  min-height: 100vh;
+  min-height: 100svh;
+  height: 100%;
+  width: 30%;
+  position: relative;
+
+  background-image: url("./assets/images/main-desktop.png");
+  background-size: cover;
+  background-repeat: none;
+
+  color: var(--light-violet);
+  overflow: visible;
+}
+
+/* card front */
+.card-front-section {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 35%;
+  left: 80%;
+  background-image: url("./assets/images/card-front.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  width: 364px;
+  height: 200px;
+
+  padding: 20px 30px;
+  z-index: 20;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.content .inserted-data {
+  font-size: 1.5rem;
+}
+
+.content .card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* card back */
+
+.card-back-section {
+  position: absolute;
+  top: 75%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+
+  background-image: url("./assets/images/card-back.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  width: 364px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-back-section .card-center {
+  width: 80%;
+  text-align: right;
+  padding-bottom: 3px;
+}
+/* right section */
+.form-section {
+  min-height: 100vh;
+  min-height: 100svh;
+  width: 70%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* general input stye  */
+
+input {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid var(--light-violet);
+  outline: none;
+}
+
+input:focus {
+  border: 1px solid var(--v-dark-violet);
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-direction: column;
+  width: min(90%, 400px);
+}
+form > * {
+  width: 100%;
+}
+
+.inputContainer {
+  position: relative;
+}
+form p {
+  min-height: 10px;
+  position: absolute;
+  top: 100%;
+  font-size: 0.6rem;
+  padding-left: 10px;
+  padding-top: 5px;
+  color: var(--input-error);
+}
+.error + input {
+  border: 1px solid var(--input-error);
+}
+.input-group-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.input-group-container label {
+  display: block;
+  padding-bottom: 5px;
+  font-size: 1rem;
+}
+.input-group-container .inputContainer {
+  display: inline-block;
+}
+.input-group-container .inputContainer input {
+  width: 70px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.input-group-container div {
+  position: relative;
+}
+
+label {
+  color: var(---dark-violet);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.btn-container {
+  width: 100%;
+}
+.btn-container button {
+  width: 100%;
+  min-height: 50px;
+  text-align: center;
+  background-color: var(--v-dark-violet);
+  border: 1px solid var(--v-dark-violet);
+  color: white;
+  cursor: pointer;
+  outline: none;
+  border-radius: 10px;
+  transition: 0.5s ease all;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.btn-container button:hover {
+  background: white;
+  color: var(--v-dark-violent);
+}
+
+/* success page */
+
+.success-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: column;
+}
+
+/* tablet design */
+@media only screen and (max-width: 1000px) {
+  .form-section {
+    justify-content: flex-end;
+    padding-right: 40px;
+  }
+}
+
+/* mobile design */
+@media only screen and (max-width: 800px) {
+  .mainContainer {
+    flex-direction: column;
+  }
+  .gradient-section {
+    height: 40vh;
+    min-height: 40svh;
+    width: 100%;
+  }
+
+  .card-front-section {
+    left: 40%;
+    top: 90%;
+    width: 273px;
+    height: 150px;
+  }
+  .card-back-section {
+    left: 60%;
+    top: 50%;
+    width: 273px;
+    height: 150px;
+  }
+  .content {
+    gap: 10px;
+  }
+  .card-front-section svg {
+    margin-top: -10px;
+    margin-left: -10px;
+  }
+  .card-front-section .card-footer {
+    font-size: 1rem;
+  }
+  .card-front-section .inserted-data {
+    font-size: 1.2rem;
+  }
+  .form-section {
+    width: 100%;
+    height: 60vh;
+    min-height: 60vh;
+    justify-content: center;
+  }
+  .input-group-container .inputContainer input {
+    max-width: 50px;
+    margin: none;
+  }
+  .input-group-container label {
+    font-size: 0.8rem;
+  }
+  .form-section {
+    margin-top: 10vh;
+  }
+}
