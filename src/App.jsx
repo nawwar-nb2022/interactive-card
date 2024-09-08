@@ -77,6 +77,14 @@ function App() {
 
   }
 
+  
+  const getZero = (e)=>{
+    if (e > 9){
+      return e
+    }else{
+      return "0" + e
+    }
+  }
   return (
     <main className="mainContainer">
       <div className="gradient-section">
@@ -93,7 +101,7 @@ function App() {
                 {inputs.name ? inputs.name : "JANE APPLESEED"}
               </div>
               <div className="exp">
-                {inputs.exp_m ? inputs.exp_m  : '00'} / {inputs.exp_y ? inputs.exp_y : "00"}
+                {inputs.exp_m ? getZero(inputs.exp_m)  : '00'} / {inputs.exp_y ? inputs.exp_y : "00"}
               </div>
             </div>
           
@@ -144,7 +152,7 @@ function App() {
                value={inputs.exp_y} onChange={handleChange} placeholder="YY" />
            </div>
          </div>
-         <div>
+         <div className="cvc">
            <label htmlFor="cvc">cvc</label>
            {errors.cvc ? <p className="error"> {errors.cvc}</p> : <p ></p> }
            <input type="text" name="cvc" value={inputs.cvc} onChange={handleChange} 

@@ -20,6 +20,8 @@
 
   color: var(--light-violet);
   overflow: visible;
+
+  text-transform: uppercase;
 }
 
 /* card front */
@@ -214,6 +216,8 @@ label {
     height: 40vh;
     min-height: 40svh;
     width: 100%;
+    background-image: url("./assets/images/main-mobile.png");
+    text-transform: capitalize;
   }
 
   .card-front-section {
@@ -256,5 +260,8 @@ label {
   }
   .form-section {
     margin-top: 10vh;
+  }
+  .cvc {
+    width: 40%;
   }
 }
